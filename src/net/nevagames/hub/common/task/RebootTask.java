@@ -9,14 +9,15 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class RebootTask extends BukkitRunnable {
 
-    private int timer = 60;
-    //14400
+    private int timer = 10800;
+    //10 800
 
     @Override
     public void run() {
 
+        APIPlugin.log ("Scheduled automatic reboot enable.");
         if(timer == 15 || timer == 10 || timer == 5 || timer == 4 || timer == 3 || timer == 2 || timer == 1){
-            Bukkit.broadcastMessage(ChatColor.RED + "§4[§cREBOOT§4] §eLe serveur redémarre dans §c" + timer + " secondes");
+            Bukkit.broadcastMessage(ChatColor.RED + "§4[§cREBOOT§4] §eLe serveur redémarre dans §c" + timer + " secondes.");
             for (Player p : Bukkit.getOnlinePlayers ()){
                 p.playSound(p.getLocation(), Sound.BLOCK_NOTE_HARP, 1L, 1L);
             }
