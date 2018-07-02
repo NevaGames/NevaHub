@@ -96,7 +96,7 @@ public class Hub extends JavaPlugin {
         this.scoreboardManager = new ScoreboardManager ();
         this.gamesTypeManager = new GamesTypeManager(this);
         RebootTask rebootTask = new RebootTask ();
-        rebootTask.runTask (this);
+        rebootTask.runTaskTimer (this, 20, 20);
 
         this.addMenu (new GuiMain (this));
         this.addMenu (new GuiProfil ());

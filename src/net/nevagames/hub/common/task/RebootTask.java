@@ -15,13 +15,10 @@ public class RebootTask extends BukkitRunnable {
     @Override
     public void run() {
 
-
-        APIPlugin.log ("Reboot lancé avec succes.");
-
         if(timer == 15 || timer == 10 || timer == 5 || timer == 4 || timer == 3 || timer == 2 || timer == 1){
-            Bukkit.broadcastMessage(ChatColor.RED + "[REBOOT] Le serveur redémarre dans " + timer + "secondes");
+            Bukkit.broadcastMessage(ChatColor.RED + "§4[§cREBOOT§4] §eLe serveur redémarre dans §c" + timer + " secondes");
             for (Player p : Bukkit.getOnlinePlayers ()){
-                p.playSound(p.getLocation(), Sound.BLOCK_NOTE_PLING, 10f, 1f);
+                p.playSound(p.getLocation(), Sound.BLOCK_NOTE_HARP, 1L, 1L);
             }
         }
 
@@ -31,7 +28,6 @@ public class RebootTask extends BukkitRunnable {
             }
             Bukkit.getServer ().shutdown ();
         }
-        APIPlugin.log (timer + " secondes");
         timer --;
 
     }
