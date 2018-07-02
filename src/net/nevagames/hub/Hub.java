@@ -1,5 +1,6 @@
 package net.nevagames.hub;
 
+import net.nevagames.api.APIPlugin;
 import net.nevagames.api.gui.AbstractGui;
 import net.nevagames.hub.commands.admin.CommandAnguille;
 import net.nevagames.hub.commands.admin.CommandEvacuate;
@@ -97,6 +98,7 @@ public class Hub extends JavaPlugin {
         this.gamesTypeManager = new GamesTypeManager(this);
         RebootTask rebootTask = new RebootTask ();
         rebootTask.runTaskTimer (this, 20, 20);
+        APIPlugin.log ("Scheduled automatic reboot enable.");
 
         this.addMenu (new GuiMain (this));
         this.addMenu (new GuiProfil ());
