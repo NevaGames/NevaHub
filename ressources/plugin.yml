@@ -1,0 +1,20 @@
+name: Hub
+author: FiddlerGun
+version: 1.0
+main: net.nevagames.hub.Hub
+depend: [NevaApi]
+
+commands:
+  fly:
+    description: Commande relative au fly des joueurs supérieur au rang joueur.
+  anguille:
+    description: Commande relative à la construction.
+  slow:
+    description: Commande relative au chat.
+  shutup:
+    description: Commande relative au chat
+  evacuate:
+      description: Commande d'évacuation
+  sign:
+      description: Commandes relatives aux panneaux
+  test:
